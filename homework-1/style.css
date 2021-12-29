@@ -1,0 +1,17 @@
+
+.btn-cart{
+    padding: 10px 15px;
+    margin: 25px;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+.products{
+    display: flex;
+    justify-content: space-around;
+}
+.product-item{
+border: 2px solid orange;
+padding: 10px;
+}
