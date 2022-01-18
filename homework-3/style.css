@@ -1,0 +1,33 @@
+.cart-item{
+    display: flex;
+    padding: 5px;
+    background-color: #eee;
+    align-items: center;
+}
+.cart-block{
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.invisible{
+    display: none;
+}
+.btn-cart{
+    padding: 10px 15px;
+    margin: 15px;
+   z-index: 10;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+.products{
+    display: flex;
+    justify-content: space-around;
+}
+.product-item{
+border: 2px solid orange;
+padding: 10px;
+}
