@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+}
+.cart{
+    display: flex;
+    gap: 30px;
+}
+.product-item{
+  margin: 20px;
+}
+.products{
+    display: flex;
+    justify-content: space-evenly;
+}
+.invisible{
+    display: none;
+}
+.basket-cart{
+    border:  1px solid orange;
+    gap: 45px;
+    position: absolute;
+    right: 3px;
+    top: 80px;
+}
+.basket_item{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content:space-between;
+    border: 1px solid orange;
+    width: 330px;
+    flex-wrap: wrap;
+}

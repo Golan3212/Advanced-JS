@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">NetStore</div>
+            <div class="cart">
+                <form action="#" class="search-form" @submit.prevent="filter">
+                <input type="text" class="search-field" v-model="searchLine">
+                <button class="btn-search" type="submit" >search
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn-cart" type="button" @click="isVisibleCart = !isVisibleCart" >Basket</button>
+           
+                    <div class="basket-cart" v-show="isVisibleCart"  >
+                        <div class="basket_item"  v-for="basketItem of basket" :key="basketItem.id_product" >
+                            <img :src="imgBasket" alt="Some img">
+                            <div class="desc_basket"></div>
+                                <h3>{{basketItem.product_name}}</h3>
+                                <p>Цена: {{basketItem.price}}</p>
+                                <p>Количество: {{basketItem.quantity}}</p>
+                                <p> Общая стоимость: {{basketItem.quantity*basketItem.price}}</p>
+                                <button @click="minusQuantity(basketItem)"> - </button>
+                                <button @click="basketItem.quantity++"> + </button>
+                                <button @click ="removeProduct(basketItem)">X</button>
+                            </div>
+                       </div>   
+                     </div>
+           
+            
+        </header>
+        <main>
+            <div  class="products">
+                <div class="product-item" v-for="product of filtered" :key="product.id_product">
+                    <img :src="imgCatalog" alt="Some img">
+                    <div class="desc">
+                        <h3>{{product.product_name}}</h3>
+                        <p>{{product.price}}</p>
+                        <button class="buy-btn" @click="addProduct(product)">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="work5.js"></script>
+   
+    
+</body>
+</html>
