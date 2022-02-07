@@ -1,0 +1,18 @@
+{
+    "amount": 333,
+    "countGoods": 2,
+    "contents": [
+      {
+        "productId": 1,
+        "productName": "product 1",
+        "price": 111,
+        "quantity": 1
+      },
+      {
+        "productId": 2,
+        "productName": "product 2",
+        "price": 2,
+        "quantity": 1
+      }
+    ]
+  }
